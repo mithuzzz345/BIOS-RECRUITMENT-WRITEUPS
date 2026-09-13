@@ -1,0 +1,70 @@
+QUESTION 1:
+a = [2, 3, 4, 5]
+
+target = 1
+
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if a[i] ^ a[j] == target:
+            print(a[i], a[j])
+
+
+QUESTION 2:
+a = [10, 5, 20, 8, 15]
+
+largest = a[0]
+smallest = a[0]
+
+for x in a:
+    if x > largest:
+        largest = x
+
+    if x < smallest:
+        smallest = x
+
+second_largest = a[0]
+second_smallest = a[0]
+
+for x in a:
+    if x != largest and x > second_largest:
+        second_largest = x
+
+    if x != smallest and x < second_smallest:
+        second_smallest = x
+
+print("Second largest =", second_largest)
+print("Second smallest =", second_smallest)
+
+
+QUESTION 3:
+s = "a,b$c"
+letters = []
+
+for x in s:
+    if x.isalpha():
+        letters.append(x)
+
+letters.reverse()
+
+result = ""
+i = 0
+
+for x in s:
+    if x.isalpha():
+        result = result + letters[i]
+        i = i + 1
+    else:
+        result = result + x
+
+print(result)
+
+
+QUESTION 4:
+def anagram(s1, s2):
+    if sorted(s1) == sorted(s2):
+        return True
+    else:
+        return False
+
+print(anagram("listen", "silent"))
+print(anagram("hello", "world"))
