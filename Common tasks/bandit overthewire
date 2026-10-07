@@ -1,21 +1,63 @@
-bandit0  - 6y2kwnwK6grgvwvpvLaa2TlcpFEKOhNR               (using ls,cat)
-banditl  - PK8fYLZg2hnHSz83plBL1iEPKdD3QToB               (using cat -- -)  
-bandit2  - 7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME               (using cat -- "--spaces in this filename--")
-bandit3  - xzTXq1rDJQVVAzdv5cHq1TQytTWuFAMq               (using ls -a)
-bandit4  - 6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG               (using cat)
-bandit5  - pXa26xhMWaC2SvDotA4r9EgZkulOeSBW               (using find inhere -type f -size 1033c !-executable)   
-bandit6  - Bmnnvf82KzQlFxgAI2d1zYbr1u9pr3E3               (using find / -type f -user bandit7 -group bandit6 -size 33c)
-bandit7  - VR1ljMayciFxbnUokuQmJFw6QC9VKtub               (using cat data.txt I grep "millionth")
-bandit8  - EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl               (using sort data.txt I uniq -u)
-bandit9  - BOs2khmbT9u0geKuOoVGh3JZKhndE3BG               (using strings data.txt I grep "==")
-bandit1o - pYFOY6HwUsDj5rL9UvyhU7MCmvBvN5Ro               (using cat data.txt base64-d)
-bandit11 - GROozWPO8QyN0mGrjUkID0WCYkZiQxrN               (using tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
-bandit12 - qQYQiHOBPR8zR61qxYqX45quvihF2uzk               (using xxd, file, gzip, bzip2, tar)
-bandit13 - aaWecNkG4FhxJQxz07uiwzVP6bJiYS65               (using SSH private key)
-bandit14 - pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7               (using nc localhost 30000)
-bandit15 - kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V               (using ncat)
-bandit16 - A big private key                              (using ssh, ncat)
-bandit17 - OQxXZjELndr90zuhOTDYBEomI0SZITXI               (using diff)
-bandit18 - KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI               (using ssh -t)
-bandit19 - 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA               (using ls, cat)
-bandit20 - bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY               (using nc, two terminals)
+bandit0  - 6y2kwnwK6grgvwvpvLaa2TlcpFEKOhNR               (using ls to list the files then using cat to read the file "readme")
+
+bandit1  - PK8fYLZg2hnHSz83plBL1iEPKdD3QToB               (using ls to list the files then using cat ./- to read a file named "-" we use 
+                                                           ./ so that "-" is not considered a input indicator instead of a file name) 
+ 
+bandit2  - 7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME               (using ls to list the files and cat "./--spaces in this filename--" we use " " to denote the whole name as a single filename
+                                                           and then ./ to consider it a file name)
+
+bandit3  - xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq               (using cd inhere and ls -a to find hidden files also ls -la can be used to long list hidden files including their permissions,
+                                                           hidden files usually start with . here the file is  "...Hiding-From-You" now cat ...Hiding-From-You for pass)
+
+bandit4  - 6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG               (using cd inhere to change directory and ls to list the files in inhere directory then <file> to identify what type of data
+                                                           each file has where ./* means all files in directory finally we use cat ./filename)  
+                                                                                                   
+bandit5  - pXa26xhMWaC2SvDotA4r9EgZkulOeSBW               (using find . -type f -size 1033c ! -executable here find searches for the file, . starts searching from current directory,
+                                                            -type f means only regular files, -size 1033c exactly 1033 bytes, ! -executable means must not be executable)
+   
+bandit6  - Bmnnvf82KzQlFxgAI2d1zYbr1u9pr3E3               (using  find / -user bandit7 -group bandit6 -size 33c here find / starts searching from root directory, -user bandit7 means 
+                                                           file owner must be bandit7, -group bandit6 means file group must be bandit6, -size 33c means file size must be 33 bytes
+                                                           additionally 2>/dev/null can be used to hide permission / error messages then cat filename)
+
+bandit7  - VR1ljMayciFxbnUokuQmJFw6QC9VKtub               (using grep millionth data.txt where data.txt is the file where the password exists and its present in the line containing the
+                                                           word millionth here grep searches the text)
+
+bandit8  - EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl               (using sort data.txt I uniq -u here sort is used to arrange lines alphabetically which puts identical lines next to each other
+                                                           and | is used to pipe the output to the next command and uniq handles repeated lines and -u shows only unique lines)
+
+bandit9  - BOs2khmbT9u0geKuOoVGh3JZKhndE3BG               (using strings data.txt I grep "==" here strings extracts readable character from binary data and | pipes it 
+                                                           to grep which then finds lines containing = and highlights them while also displaying the rest of things in the file)
+
+bandit10 - pYFOY6HwUsDj5rL9UvyhU7MCmvBvN5Ro               (using base64 -d data.txt here the file contains base64 encoded data so we decode it using command base64, -d means decode)
+
+bandit11 - GROozWPO8QyN0mGrjUkID0WCYkZiQxrN               (using tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt here tr is used to replace characters, and the first character set is normal
+                                                           alphabets and the next is alphabets shifted by 13,,,  This reverses ROT13 and < gives the output to data.txt)
+ 
+bandit12 - qQYQiHOBPR8zR61qxYqX45quvihF2uzk               (using xxd, file, gzip, bzip2, tar here the goal is to reverse a hex dump and repeatedly decompress the file 
+                                                           until reaching the password also we use a temporary directory as we cannot create or edit in home directory)
+
+bandit13 - aaWecNkG4FhxJQxz07uiwzVP6bJiYS65               (using sshkey.private the private SSH Key is found then copied and saved it with chmod 600 then logged into bandit14 
+                                                           using ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220 after this cat is used to find the password)
+
+bandit14 - pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7               (using nc localhost 30000 where nc is netcat , local host is this machine and 30000 is the port number ,,
+                                                           it creates a network connection to that service then past the password of past level to get the current level password)
+
+bandit15 - kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V               (using openssl s_client -connect localhost:30001 here network connection is ssl encrypted... now openssl is TLS toolkit,
+                                                           s_client creates TLS client connection , -connect to specify destination while localhost:30001 is machine + port paste
+                                                           current password to retrieve new password)
+                                                           
+bandit16 - A big private key                              (using nmap -p 31000-32000 local host here nmap scans ports/networks, -p specify ports to scan, 31000 to 32000 is ports range
+                                                           then openssl s_client -connect localhost:PORT connects port using ssl here we get a SSH PRIVATE KEY, save it nano /tmp/key
+                                                           set permit chmod 600 /tmp/key then ssh -i /tmp/key bandit17@localhost -p 2220 to ssh into bandit 17)
+
+bandit17 - OQxXZjELndr90zuhOTDYBEomI0SZITXI               (using diff passwords.old passwords.new to tell the difference between two files which is the password)
+
+bandit18 - KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI               (using ssh bandit18@localhost -p 2220 "cat readme" here bandit18@localhost is username + machine here it means that
+                                                           connect to the remote machine and execute command there)
+
+bandit19 - 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA               (using ls -l you can find bandit20-do with (SUID) permissions now ./bandit20-do then ./bandit20-do cat /etc/bandit_pass/bandit20
+                                                           executes the command while cat reads the protected password and /etc/bandit_pass/bandit20)
+
+bandit20 - bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY               (using netcat and two terminals here firs we start netcat listener using nc -l 1234 now in terminal 2 ./suconnect 1234
+                                                           Now suconnect connects to port 1234 in Terminal 1 and paste bandit 20 password ans enter to get password )
+
