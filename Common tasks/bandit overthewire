@@ -55,7 +55,7 @@ bandit17 - OQxXZjELndr90zuhOTDYBEomI0SZITXI               (using diff passwords.
 bandit18 - KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI               (using ssh bandit18@localhost -p 2220 "cat readme" here bandit18@localhost is username + machine here it means that
                                                            connect to the remote machine and execute command there instead of seperate connection and command)
 
-bandit19 - 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA               (using ls -l you can find bandit20-do with (SUID) permissions now ./bandit20-do then ./bandit20-do cat /etc/bandit_pass/bandit20
+bandit19 - 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA               (using ls -l you can find bandit20-do with (SUID) permissions now do "./bandit20-do cat /etc/bandit_pass/bandit20"
                                                            executes the command while cat reads the protected password)
 
 bandit20 - bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY               (using netcat and two terminals here firs we start netcat listener using nc -l 1234 now in terminal 2 ./suconnect 1234
