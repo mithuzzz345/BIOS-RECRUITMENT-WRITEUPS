@@ -42,7 +42,7 @@ bandit13 - aaWecNkG4FhxJQxz07uiwzVP6bJiYS65               (using sshkey.private 
 bandit14 - pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7               (using nc localhost 30000 where nc is netcat , local host is this machine and 30000 is the port number ,,
                                                            it creates a network connection to that service then past the password of past level to get the current level password)
 
-bandit15 - kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V               (using openssl s_client -connect localhost:30001 here network connection is ssl encrypted... now openssl is TLS toolkit,
+bandit15 - kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V               (using openssl s_client -connect localhost:30001 here network connection is ssl (secure socket layer) encrypted... now openssl is TLS (transport layer security) toolkit,
                                                            s_client creates TLS client connection , -connect to specify destination while localhost:30001 is machine + port paste
                                                            current password to retrieve new password)
                                                            
