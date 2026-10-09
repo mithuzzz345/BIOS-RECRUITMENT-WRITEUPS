@@ -20,13 +20,13 @@ bandit6  - Bmnnvf82KzQlFxgAI2d1zYbr1u9pr3E3               (using  find / -user b
                                                            additionally 2>/dev/null can be used to hide permission / error messages then cat filename)
 
 bandit7  - VR1ljMayciFxbnUokuQmJFw6QC9VKtub               (using grep millionth data.txt where data.txt is the file where the password exists and its present in the line containing the
-                                                           word millionth here grep searches the text)
+                                                           word millionth here grep searches the text and displayes the line with searched word higlighted)
 
 bandit8  - EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl               (using sort data.txt I uniq -u here sort is used to arrange lines alphabetically which puts identical lines next to each other
                                                            and | is used to pipe the output to the next command and uniq handles repeated lines and -u shows only unique lines)
 
 bandit9  - BOs2khmbT9u0geKuOoVGh3JZKhndE3BG               (using strings data.txt I grep "==" here strings extracts readable character from binary data and | pipes it 
-                                                           to grep which then finds lines containing = and highlights them while also displaying the rest of things in the file)
+                                                           to grep which then finds lines containing = and highlights them while also displaying the rest of things in the Line)
 
 bandit10 - pYFOY6HwUsDj5rL9UvyhU7MCmvBvN5Ro               (using base64 -d data.txt here the file contains base64 encoded data so we decode it using command base64, -d means decode)
 
