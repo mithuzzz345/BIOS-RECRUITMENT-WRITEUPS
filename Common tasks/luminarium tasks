@@ -150,7 +150,7 @@ Used tee to send piped output to a file and the terminal.
 xii) Process substitution for input - pwn.college{stC0XvGj_PelFrndchb5a54Mav-.0lNwMDOxwCMxkzMwIzW} (using diff and <())
 Used <() to provide command output as input to diff.
 
-xiii) Writing to multiple programs - pwn.college{Y20_BtUMnS1U2ztl_sPkuc6nlCU.QXwgDN1wCMxkzMwIzW} (using tee, >())
+xiii) Writing to multiple programs - pwn.college{Y20_BtUMnS1U2ztl_sPkuc6nlCU.QXwgDN1wCMxkzMwIzW} (using tee, >() these() are either files or progs)
 Used tee and >() to send output to multiple programs.
 
 xiv) Split-piping stderr and stdout - pwn.college{M1OBgqOM6oDG0MtmBNZuQXCQCDo.QXxQDM2wCMxkzMwIzW} (using 2>, >(), |)
