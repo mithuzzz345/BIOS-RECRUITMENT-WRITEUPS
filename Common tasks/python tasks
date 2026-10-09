@@ -1,4 +1,4 @@
-QUESTION 1:
+QUESTION 1: Write a program to find all pairs in a list whose XOR is equal to a given target.
 a = [2, 3, 4, 5]
 
 target = 1
@@ -9,7 +9,7 @@ for i in range(len(a)):
             print(a[i], a[j])
 
 
-QUESTION 2:
+QUESTION 2: Write a program to find the second largest and second smallest elements in an array without sorting or in-built functions.
 a = [10, 5, 20, 8, 15]
 
 largest = a[0]
@@ -36,7 +36,7 @@ print("Second largest =", second_largest)
 print("Second smallest =", second_smallest)
 
 
-QUESTION 3:
+QUESTION 3: Write a program to reverse only the alphabets in a string without changing the position of special characters.
 s = "a,b$c"
 letters = []
 
@@ -59,7 +59,7 @@ for x in s:
 print(result)
 
 
-QUESTION 4:
+QUESTION 4: Write a function that takes two strings and returns True if they are anagrams of each other, and False otherwise.
 def anagram(s1, s2):
     if sorted(s1) == sorted(s2):
         return True
