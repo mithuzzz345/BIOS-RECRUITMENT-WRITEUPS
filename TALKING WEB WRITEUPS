@@ -134,7 +134,7 @@ Steps Followed:
 headers = {"Host": "www.w3challs.com"}
 r = requests.get("http://challenge.localhost/pwn", headers=headers)
 print(r.text)
-6. Retrieved the flag from the response.
+5. Retrieved the flag from the response.
 
 LEVEL 10 — HTTP Host Header (curl)
 
