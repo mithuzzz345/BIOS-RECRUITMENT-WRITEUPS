@@ -53,12 +53,11 @@ IPV4 VS IPV6 WRITEUPS:-
 IPV4 (INTERNET PROTOCOL VERSION 4):-
 1. Address Format: IPv4 uses a 32-bit address divided into four octets. Each octet is represented by a decimal number from 0 to 255, separated by dots. Example: 192.168.1.1.
 2. Address Space: IPv4 supports approximately 4.3 billion addresses. Due to the increasing number of internet-connected devices, its available public addresses have become limited.
-3. Communication: IPv4 supports unicast, multicast, and broadcast communication. These methods allow data to be sent to a single device, a group of devices, or all devices on a local network, respectively.
-4. Address Assignment: IPv4 addresses can be assigned manually or automatically using DHCP (Dynamic Host Configuration Protocol). Private IP addresses are commonly used within local networks, while public IP addresses enable communication over the internet.
-5. NAT: Network Address Translation (NAT) allows multiple devices in a private network to share a public IPv4 address. This helps conserve the limited supply of public IPv4 addresses.
+3. Address Assignment: IPv4 addresses can be assigned manually or automatically using DHCP (Dynamic Host Configuration Protocol). Private IP addresses are commonly used within local networks, while public IP addresses enable communication over the internet.
+4. NAT: Network Address Translation (NAT) allows multiple devices in a private network to share a public IPv4 address. This helps conserve the limited supply of public IPv4 addresses.
 IPV6 (INTERNET PROTOCOL VERSION 6):-
 1. Address Format: IPv6 uses a 128-bit address represented by eight groups of hexadecimal digits separated by colons. Example: 2001:db8::1. Consecutive zero groups can be shortened using double colons.
 2. Address Space: IPv6 provides 2^128 possible addresses, offering an extremely large address space. This supports the growing number of devices connected to the internet.
-3. Communication: IPv6 supports unicast, multicast, and anycast communication. Unlike IPv4, it does not use broadcast, allowing data to be sent to specific devices or groups without broadcasting to every device.
-4. Address Assignment: IPv6 supports automatic address configuration, allowing devices to configure their own addresses in suitable networks. It also supports DHCPv6 when a network requires managed address assignment.
-5. Improved Networking: IPv6 has a simplified base header and supports more efficient routing in many network environments. It also reduces the need for NAT when globally routable addresses are available and includes standardized support for IPsec.
+3. Address Assignment: IPv6 supports automatic address configuration, allowing devices to configure their own addresses in suitable networks. It also supports DHCPv6 when a network requires managed address assignment.
+4. Improved Networking: IPv6 has a simplified base header and supports more efficient routing in many network environments. It also reduces the need for NAT when globally routable addresses are available and includes standardized support for IPsec.
+ 
