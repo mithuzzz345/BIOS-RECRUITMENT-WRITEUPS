@@ -130,8 +130,10 @@ Steps Followed:
 2. Identified the hostname as www.w3challs.com and the
    endpoint as /pwn.
 3. Imported Python's requests library.
-4. Set a custom Host header using a headers dictionary.
-5. Sent a GET request and printed the response.
+4. used import requests
+headers = {"Host": "www.w3challs.com"}
+r = requests.get("http://challenge.localhost/pwn", headers=headers)
+print(r.text)
 6. Retrieved the flag from the response.
 
 LEVEL 10 — HTTP Host Header (curl)
