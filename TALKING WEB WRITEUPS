@@ -1,0 +1,152 @@
+TALKING WEB WRITEUPS
+pwn.college — Fundamentals
+LEVEL 1 — Accessing the Web Server
+
+Flag:
+QKF3fqJEaNjYaTHSb844i0VI6oT.0lMxgDNxwCNyADO0IzW
+
+Concept: Accessing a locally hosted web server.
+
+Steps Followed:
+
+1. Executed /challenge/server in the terminal.
+2. Identified the URL printed by the server.
+3. Opened the URL in the browser within the dojo.
+4. Retrieved the flag from the webpage.
+
+LEVEL 2 — HTTP Paths
+
+Flag:
+YGUcFlgaeQIkyJDGq90vztO8GEA.01MxgDNxwCNyADO0IzW
+
+Concept: Accessing a specific HTTP endpoint.
+
+Steps Followed:
+
+1. Inspected the server code using cat /challenge/server.
+2. Identified the required endpoint: /hack.
+3. Opened http://challenge.localhost/hack in the browser.
+4. Retrieved the flag from the response.
+
+LEVEL 3 — Inspecting Page Source
+
+Flag:
+o7lPiPZC5YHlAAYwBp3N6F7Ftr_.0FNxgDNxwCNyADO0IzW
+
+Concept: Examining HTML source code to locate hidden information.
+
+Steps Followed:
+
+1. Inspected the server code to identify the correct endpoint.
+2. Opened the endpoint in the browser.
+3. Pressed Ctrl+U to view the page source.
+4. Examined the HTML source and located the flag.
+
+LEVEL 4 — HTTP Response Headers
+
+Flag:
+MyPakTHu4ayDoNjbc75a1IMre9j.0VNxgDNxwCNyADO0IzW
+
+Concept: Extracting information from HTTP response headers.
+
+Steps Followed:
+
+1. Opened the challenge webpage in the browser.
+2. Opened Developer Tools and selected the Network tab.
+3. Reloaded the webpage and selected its request.
+4. Inspected the Response Headers and located the flag.
+
+LEVEL 5 — HTTP (Netcat)
+
+Flag:
+8S888cftGj6L7Iy2xNQ8gTrddOt.QX5YjMzwCNyADO0IzW
+
+Concept: Sending raw HTTP requests using Netcat.
+
+Steps Followed:
+
+1. Inspected /challenge/server to identify the endpoint and port.
+2. Connected to the server using nc challenge.localhost 80.
+3. Sent a GET request for / using HTTP/1.1.
+4. Included the Host header and a blank line to terminate
+   the request.
+5. Retrieved the flag from the server response.
+
+LEVEL 6 — HTTP paths (netcat)
+
+Flag:
+IX3fnsjW5iGWHw3BKJEK3gIMcNm.QX1cjMzwCNyADO0IzW
+
+Concept: Sending raw HTTP requests using Netcat with paths
+
+Steps Followed:
+
+1. Inspected /challenge/server to identify the endpoint and port.
+2. Connected to the server using nc challenge.localhost 80.
+3. Sent a GET request for /path using HTTP/1.1.
+4. Included the Host header and a blank line to terminate
+   the request.
+5. Retrieved the flag from the server response.
+
+LEVEL 7 — HTTP (curl)
+
+Flag:
+gd65W3uzEJ13Wg3QyliZanRI4L7.QX0cjMzwCNyADO0IzW
+
+Concept: Sending HTTP GET requests using curl.
+
+Steps Followed:
+
+1. Inspected /challenge/server to identify the endpoint.
+2. Used curl to send a GET request to the challenge server.
+3. Examined the HTTP response and retrieved the flag.
+
+LEVEL 8 — HTTP (Python)
+
+Flag:
+oIVqpoIf0o_ubDMsNjwWexPdY4Q.QX2cjMzwCNyADO0IzW
+
+Concept: Making HTTP requests using Python's requests library.
+
+Steps Followed:
+
+1. Started the Python interpreter.
+2. Imported the requests library.
+3. Inspected the server code to identify the correct endpoint.
+4. Sent a GET request using requests.get().
+5. Printed the response using r.text and retrieved the flag.
+
+LEVEL 9 — HTTP Host Header (Python)
+
+Flag:
+MKKkxYxn9ZgqHmTIGQGXcJU6rZo.QXzcjMzwCNyADO0IzW
+
+Concept: Host header manipulation.
+
+Steps Followed:
+
+1. Inspected /challenge/server to identify the required
+   hostname and endpoint.
+2. Identified the hostname as www.w3challs.com and the
+   endpoint as /pwn.
+3. Imported Python's requests library.
+4. Set a custom Host header using a headers dictionary.
+5. Sent a GET request and printed the response.
+6. Retrieved the flag from the response.
+
+LEVEL 10 — HTTP Host Header (curl)
+
+Flag:
+0LA212MfOMIsRAqj7lBtaD2Z5im.QXxcjMzwCNyADO0IzW
+
+Concept: Setting a custom Host header using curl.
+
+Steps Followed:
+
+1. Inspected /challenge/server to identify the hostname
+   and endpoint.
+2. Identified the hostname as pwn.college and the
+   endpoint as /authenticate.
+3. Used curl's -H option to set the Host header.
+4. Sent a GET request to the correct endpoint.
+5. Retrieved the flag from the HTTP response.
