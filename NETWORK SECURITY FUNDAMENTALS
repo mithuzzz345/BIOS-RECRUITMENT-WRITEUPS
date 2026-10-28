@@ -1,0 +1,64 @@
+OSI MODEL — 7 LAYERS
+The OSI (Open Systems Interconnection) Model is a seven-layer framework that explains how data is transmitted between devices over a network. Each layer performs a specific function and works with the layers above and below it to enable successful communication.
+LAYER 7 — APPLICATION
+The Application Layer provides network services directly to user applications. It allows applications such as web browsers and email clients to access network resources. It acts as the interface between network services and application software. It supports services such as web browsing, file transfers, and domain name resolution.
+Examples: HTTP, HTTPS, FTP, DNS, SMTP.
+LAYER 6 — PRESENTATION
+The Presentation Layer ensures that data is represented in a format that the receiving device can understand. It performs data translation, encryption, decryption, and compression when required. It helps different systems exchange data even when they use different internal formats. This layer is also responsible for preparing data for presentation to applications.
+Examples: JPEG, PNG, data encoding, encryption, compression.
+LAYER 5 — SESSION
+The Session Layer establishes, manages, and terminates communication sessions between applications on different devices. It controls the beginning and end of communication and helps maintain an organized exchange of information. It can provide synchronization points that help communication resume after interruptions. This layer is especially useful when applications need to maintain ongoing conversations.
+Examples: Session management, synchronization, Remote Procedure Call (RPC).
+LAYER 4 — TRANSPORT
+The Transport Layer provides end-to-end data delivery between devices. It divides large amounts of data into smaller segments and reassembles them at the destination. It can provide error recovery, flow control, and reliable delivery when required. It also uses port numbers to direct data to the appropriate application.
+Examples: TCP, UDP.
+LAYER 3 — NETWORK
+The Network Layer is responsible for routing packets from the source network to the destination network. It uses logical addresses, such as IP addresses, to identify devices across interconnected networks. Routers operate at this layer and help determine suitable paths for packet delivery. This layer also handles packet forwarding and may support fragmentation depending on the network protocol.
+Examples: IPv4, IPv6, IP routing, routers.
+LAYER 2 — DATA LINK
+The Data Link Layer transfers data between devices connected to the same local network. It organizes data into frames and uses MAC addresses for local delivery. It also manages access to the transmission medium and detects certain transmission errors. Network switches commonly operate at this layer to forward frames to the appropriate devices.
+Examples: Ethernet, MAC addresses, switches, Wi-Fi link protocols.
+LAYER 1 — PHYSICAL
+The Physical Layer is responsible for transmitting raw bits (0s and 1s) through a physical communication medium. It defines the electrical, optical, radio, and mechanical characteristics used for transmission. It specifies aspects such as cables, connectors, signal levels, and data transmission rates. This layer converts bits into signals that can travel through the chosen medium.
+Examples: Ethernet cables, fiber-optic cables, radio signals, connectors, hubs.
+DATA FLOW:
+Sender:
+Application → Presentation → Session → Transport → Network → Data Link → Physical
+Receiver:
+Physical → Data Link → Network → Transport → Session → Presentation → Application
+
+
+
+
+
+TCP/IP MODEL AND ITS LAYERS:-
+The TCP/IP (Transmission Control Protocol/Internet Protocol) model is a networking framework that explains how data is transmitted between devices over the internet. It consists of four layers, each responsible for a specific part of network communication. These layers work together to ensure that data is properly prepared, transmitted, routed, and received.
+LAYER 4 — APPLICATION LAYER
+The Application Layer provides network services to applications used by people, such as web browsers and email clients. It combines the functions of the Application, Presentation, and Session layers of the OSI model. It supports services such as web browsing, file transfer, email communication, and domain name resolution. Common protocols include HTTP, HTTPS, FTP, DNS, and SMTP.
+LAYER 3 — TRANSPORT LAYER
+The Transport Layer provides communication between applications running on different devices. It divides data into smaller segments and uses port numbers to deliver it to the correct application. TCP provides reliable, ordered delivery with error recovery, while UDP offers faster communication with lower overhead but does not guarantee delivery. Common protocols include TCP and UDP.
+LAYER 2 — INTERNET LAYER
+The Internet Layer is responsible for addressing and routing packets between different networks. It uses IP addresses to identify the source and destination of packets and helps routers forward them toward their destinations. This layer enables communication between devices even when they are connected to different networks. Common protocols include IPv4, IPv6, and ICMP.
+LAYER 1 — NETWORK ACCESS LAYER
+The Network Access Layer handles the transmission of data over the local network and the physical communication medium. It combines functions similar to the Data Link and Physical layers of the OSI model. It manages local frame delivery, MAC addressing where applicable, and the transmission of bits through cables or wireless signals. Common technologies include Ethernet and Wi-Fi.
+DATA FLOW:
+Sender: Application → Transport → Internet → Network Access
+Receiver: Network Access → Internet → Transport → Application
+
+
+
+
+
+IPV4 VS IPV6 WRITEUPS:-
+IPV4 (INTERNET PROTOCOL VERSION 4):-
+1. Address Format: IPv4 uses a 32-bit address divided into four octets. Each octet is represented by a decimal number from 0 to 255, separated by dots. Example: 192.168.1.1.
+2. Address Space: IPv4 supports approximately 4.3 billion addresses. Due to the increasing number of internet-connected devices, its available public addresses have become limited.
+3. Communication: IPv4 supports unicast, multicast, and broadcast communication. These methods allow data to be sent to a single device, a group of devices, or all devices on a local network, respectively.
+4. Address Assignment: IPv4 addresses can be assigned manually or automatically using DHCP (Dynamic Host Configuration Protocol). Private IP addresses are commonly used within local networks, while public IP addresses enable communication over the internet.
+5. NAT: Network Address Translation (NAT) allows multiple devices in a private network to share a public IPv4 address. This helps conserve the limited supply of public IPv4 addresses.
+IPV6 (INTERNET PROTOCOL VERSION 6):-
+1. Address Format: IPv6 uses a 128-bit address represented by eight groups of hexadecimal digits separated by colons. Example: 2001:db8::1. Consecutive zero groups can be shortened using double colons.
+2. Address Space: IPv6 provides 2^128 possible addresses, offering an extremely large address space. This supports the growing number of devices connected to the internet.
+3. Communication: IPv6 supports unicast, multicast, and anycast communication. Unlike IPv4, it does not use broadcast, allowing data to be sent to specific devices or groups without broadcasting to every device.
+4. Address Assignment: IPv6 supports automatic address configuration, allowing devices to configure their own addresses in suitable networks. It also supports DHCPv6 when a network requires managed address assignment.
+5. Improved Networking: IPv6 has a simplified base header and supports more efficient routing in many network environments. It also reduces the need for NAT when globally routable addresses are available and includes standardized support for IPsec.
